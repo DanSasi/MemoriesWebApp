@@ -30,15 +30,15 @@ const Post = ({post , setCurrentId}) => {
             </div>
             <Typography className ={classes.title} variant='h5' gutterBottom>{post.title} </Typography>
             <CardContent>
-                <Typography  variant='h5' gutterBottom>{post.message} </Typography>
+                <Typography  variant='body2' color= "textSecondary" component="p">{post.message} </Typography>
             </CardContent>
             <CardActions>
                 <Button size="small" color="primary" onClick={() => dispach(likedPost(post._id))}>
                     <ThumbUpAltIcon fontSize="small"/>
-                    Like
+                    &nbsp: Like
                     {post.likeCount}
                 </Button>
-                <Button size="small" color="primary" onClick={() => {dispach(deletePost(post._id))}>
+                <Button size="small" color="primary" onClick={() => {dispach(deletePost(post._id))}}>
                     <DeleteIcon fontSize="small"/>
                     Delete
                 </Button>
